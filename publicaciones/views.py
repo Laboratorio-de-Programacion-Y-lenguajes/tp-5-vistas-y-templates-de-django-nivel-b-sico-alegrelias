@@ -10,7 +10,10 @@ class InicioView(TemplateView):
         context["mensaje"] = "..."
         return context
 
-
+class PublicacionListView(ListView):
+    model = Publicacion
+    template_name = 'publicaciones/publicacion_list.html'
+    context_object_name = 'publicacion_list'
 
 # ---------------------------------------------------------------------------
 # InicioView
