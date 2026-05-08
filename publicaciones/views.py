@@ -15,6 +15,11 @@ class PublicacionListView(ListView):
     template_name = 'publicaciones/publicacion_list.html'
     context_object_name = 'publicacion_list'
 
+class PublicacionDetailView(DetailView):
+    model = Publicacion
+    template_name = 'publicaciones/publicacion_detail.html'
+    context_object_name = 'publicacion'
+    pk_url_kwarg = 'publicacion_id'
 # ---------------------------------------------------------------------------
 # InicioView
 # ---------------------------------------------------------------------------
