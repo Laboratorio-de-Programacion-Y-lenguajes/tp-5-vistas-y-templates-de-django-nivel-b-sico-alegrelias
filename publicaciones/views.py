@@ -1,6 +1,17 @@
 from django.views.generic import TemplateView, ListView, DetailView
 from .models import Publicacion
 
+class InicioView(TemplateView):
+    template_name = 'publicaciones/inicio.html'
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        #TODO: arreglar esto
+        context["titulo"] = "..."
+        context["mensaje"] = "..."
+        return context
+
+
+
 # ---------------------------------------------------------------------------
 # InicioView
 # ---------------------------------------------------------------------------
